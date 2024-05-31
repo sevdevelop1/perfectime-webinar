@@ -39,7 +39,7 @@ header::before {
     width: 100vw;
     background-image: url('assets/images/header.webp');
     background-size: cover;
-    filter: blur(.2rem) brightness(.1);
+    filter: blur(.2rem) brightness(.08);
     z-index: -1;
 }
 
@@ -83,7 +83,7 @@ header p {
 .btn {
     background: #1fb79b;
     color: white;
-    padding: 20px;
+    padding: 20px 40px;
     text-wrap: balance;
     text-decoration: none;
     border-radius: 2.5rem;
@@ -99,11 +99,21 @@ header p {
     cursor: pointer;
 }
 
+
 #benefits {
-    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 400px;
+    padding-bottom: 0;
+    padding-top: 80px;
+}
+
+#benefits div {
     text-align: center;
     background-color: aliceblue;
     border-radius: 2.5rem;
+    padding: 2rem;
 }
 
 #benefits h2 {
@@ -134,7 +144,7 @@ header p {
 
 #register form {
     max-width: 400px;
-    margin: 0 auto;
+    margin: 20px auto;
 }
 
 #register label {
@@ -149,6 +159,7 @@ header p {
 #register h2 b {
     font-family: sans-serif;
     text-transform: uppercase;
+    font-size: 2rem;
 }
 
 #register h2 span {
@@ -156,7 +167,7 @@ header p {
 }
 
 #about {
-    padding: 40px 0;
+    padding: 60px 0;
 }
 
 .about-content {
@@ -176,6 +187,7 @@ header p {
     font-size: 3rem;
     color: #1fb79b;
     font-family: 'brush';
+    text-shadow: 4px 5px 3px gainsboro;
 }
 
 .about-image {
@@ -241,11 +253,16 @@ footer a {
 
     #benefits {
         width: 100%;
+    }
+
+    #benefits div {
+        padding: 0;
         border-radius: 0;
     }
 
     #benefits h2, #benefits ul {
         padding: .5rem;
+        text-wrap: wrap;
     }
 
     #register h2 {
