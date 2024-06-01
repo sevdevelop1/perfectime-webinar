@@ -24,7 +24,7 @@
                 <p>Hola, soy Víctor Ramírez, experto en productividad y gestión del tiempo. He ayudado a cientos de profesionales a transformar sus vidas a través de técnicas efectivas y herramientas prácticas.</p>
             </div>
             <div class="about-image">
-                <img src="assets/images/ponencia.png" alt="Foto de Víctor Ramírez en una ponencia">
+                <img src="assets/images/ponencia.webp" alt="Foto de Víctor Ramírez en una ponencia">
             </div>
         </div>
     </section>
@@ -44,9 +44,8 @@
             y <span class="main-color sans-serif">aumentar tu productividad</span></h2>
         <form id="registerForm">
             <input type="text" id="name" name="name" placeholder="Nombre sin apellidos" required>
-            <input type="email" id="email" name="email" placeholder="Email" required>
-            
-            <button type="submit" class="btn">Unirme a la masterclass</button>
+            <input type="email" id="email" name="email" placeholder="Email" required>            
+            <button type="submit" class="btn btn-submit"><span id="text-submit">Unirme a la masterclass</span><div id="loader" class="loader"></div></button>
         </form>
     </section>
 
@@ -54,6 +53,8 @@
         <p>Sígueme en Instagram: <a href="https://www.instagram.com/victorramirez_92" target="_blank">@victorramirez_92</a></p>
     </footer>
 
-    <script src="main.js"></script>
+    <script type="module" src="main.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
 </body>
 </html>

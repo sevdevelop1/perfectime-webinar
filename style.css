@@ -1,11 +1,11 @@
 @font-face {
     font-family: brush;
-    src: url(brush.ttf);
+    src: url(assets/fonts/brush.ttf);
   }
 
   @font-face {
     font-family: font2;
-    src: url(font-2.ttf);
+    src: url(assets/fonts/font-2.ttf);
   }
 
   html {
@@ -17,7 +17,6 @@ body {
     margin: 0;
     padding: 0;
     color: #333;
-    
 }
 
 .main-color {
@@ -41,6 +40,7 @@ header::before {
     background-size: cover;
     filter: blur(.2rem) brightness(.08);
     z-index: -1;
+    transition: all 0.3s ease;
 }
 
 header {
@@ -166,6 +166,11 @@ header p {
     font-size: 1.8rem;
 }
 
+.btn-submit span{
+    font-size: 1.5rem;
+    font-family: 'font2';
+}
+
 #about {
     padding: 60px 0;
 }
@@ -200,9 +205,9 @@ header p {
     max-width: 100%;
     height: auto;
     border-radius: 1rem;
-    height: 40rem;
-    filter: brightness(0.9) drop-shadow(2px 4px 6px #1fb79b)
-    
+    height: clamp(30rem, 3vw, 40rem);
+    filter: brightness(0.9) drop-shadow(2px 4px 6px #1fb79b);
+    border: #1fb79b 1px double;
 }
 
 #register input {
@@ -214,16 +219,18 @@ header p {
     font-size: 1.1rem;
 }
 
-/*#register button {
-    background: #1fb79b;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 2.5rem;
-    cursor: pointer;
-    margin-top: 15px;
-    font-size: 1.5rem;
-}*/
+#thanks {
+    background-color: aliceblue;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+#thanks h1 {
+    color: #1fb79b;
+    font-size: 3rem;
+}
 
 footer {
     background: black;
@@ -237,6 +244,12 @@ footer {
 footer a {
     color: #1fb79b;
     text-decoration: none;
+}
+
+@media screen and (max-width: 750px) {
+.about-image, #about p{
+    text-align: center;
+}
 }
 
 @media screen and (max-width: 430px) {
@@ -273,3 +286,37 @@ footer a {
         width: 90%;
     }
 }
+
+.btn-submit {
+    position: relative;
+}
+
+.loader {
+    border: 5px solid #f3f3f3;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    border-top: 5px solid #1fb79b;
+    visibility: hidden;
+    width: 1rem;
+    height: 1rem;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+  }
+  
+  /* Safari */
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
