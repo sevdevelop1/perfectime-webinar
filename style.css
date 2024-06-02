@@ -222,14 +222,38 @@ header p {
 #thanks {
     background-color: aliceblue;
     height: 100vh;
-    display: flex;
-    align-items: center;
+    position: relative;
     text-align: center;
+}
+
+#thanks .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
 }
 
 #thanks h1 {
     color: #1fb79b;
     font-size: 3rem;
+}
+
+#thanks p  {
+    font-size: 1.5rem;
+    text-wrap: balance;
+}
+
+#thanks img {
+    height: 5.5rem;
+    max-width: 35rem;
+    border-radius: 2.5rem;
+    display: flex;
+    justify-self: center;
 }
 
 footer {
@@ -249,6 +273,10 @@ footer a {
 @media screen and (max-width: 750px) {
 .about-image, #about p{
     text-align: center;
+}
+
+#thanks img {
+    height: 3.5rem;
 }
 }
 
@@ -285,6 +313,10 @@ footer a {
     #register input {
         width: 90%;
     }
+
+    #thanks img {
+        height: 3rem;
+    }    
 }
 
 .btn-submit {
