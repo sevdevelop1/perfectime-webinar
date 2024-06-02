@@ -99,6 +99,10 @@ header p {
     cursor: pointer;
 }
 
+.disabled {
+    background-color: black;
+    cursor: progress !important;
+}
 
 #benefits {
     display: flex;
